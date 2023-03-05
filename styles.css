@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+
+:root {
+  font-family: "EB Garamond", serif;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.accordion {
+  width: 800px;
+}
+
+.accordion-item:hover {
+  cursor: pointer;
+}
+
+.accordion-item-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.accordion-item:nth-child(1) {
+  background-color: #e5e4e6;
+  color: #080608;
+}
+
+.accordion-item:nth-child(2) {
+  background-color: #9fdba8;
+  color: #080608;
+}
+
+.accordion-item:nth-child(3) {
+  background-color: #363a43;
+  color: #e5e4e6;
+}
+
+.accordion-item:nth-child(4) {
+  background-color: #6cbfe9;
+  color: #080608;
+}
+
+.accordion-item p {
+  font-size: 40px;
+  padding: 0px 20px 20px 20px;
+  transition: opacity 200ms ease-out, height 400ms ease-out;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.accordion-item-active p {
+  visibility: visible;
+  height: 120px;
+  opacity: 0.8;
+}
